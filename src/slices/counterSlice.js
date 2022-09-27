@@ -7,11 +7,12 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     addCounter: (state, action) => {
-      state.counter = state.counter + 1;
+      state = state + 1;
+      return state;
     },
   },
 });
 
 export const { addCounter } = counterSlice.actions;
 
-export default productCartSlice.reducer;
+export default counterSlice.reducer;
